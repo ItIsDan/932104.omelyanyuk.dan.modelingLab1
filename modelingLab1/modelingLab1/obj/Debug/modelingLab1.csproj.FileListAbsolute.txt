@@ -1,0 +1,11 @@
+C:\Users\Snulow\source\repos\modelingLab1\modelingLab1\bin\Debug\modelingLab1.exe.config
+C:\Users\Snulow\source\repos\modelingLab1\modelingLab1\bin\Debug\modelingLab1.exe
+C:\Users\Snulow\source\repos\modelingLab1\modelingLab1\bin\Debug\modelingLab1.pdb
+C:\Users\Snulow\source\repos\modelingLab1\modelingLab1\obj\Debug\modelingLab1.csproj.AssemblyReference.cache
+C:\Users\Snulow\source\repos\modelingLab1\modelingLab1\obj\Debug\modelingLab1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Snulow\source\repos\modelingLab1\modelingLab1\obj\Debug\modelingLab1.Form1.resources
+C:\Users\Snulow\source\repos\modelingLab1\modelingLab1\obj\Debug\modelingLab1.Properties.Resources.resources
+C:\Users\Snulow\source\repos\modelingLab1\modelingLab1\obj\Debug\modelingLab1.csproj.GenerateResource.cache
+C:\Users\Snulow\source\repos\modelingLab1\modelingLab1\obj\Debug\modelingLab1.csproj.CoreCompileInputs.cache
+C:\Users\Snulow\source\repos\modelingLab1\modelingLab1\obj\Debug\modelingLab1.exe
+C:\Users\Snulow\source\repos\modelingLab1\modelingLab1\obj\Debug\modelingLab1.pdb
