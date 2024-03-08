@@ -34,6 +34,7 @@
             this.tableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.startButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.decodedText = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ruleSP)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,7 +84,7 @@
             this.tableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 37F));
             this.tableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.tableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 44F));
             this.tableLayout.Location = new System.Drawing.Point(12, 12);
@@ -122,11 +123,20 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // decodedText
+            // 
+            this.decodedText.AutoSize = true;
+            this.decodedText.Location = new System.Drawing.Point(188, 464);
+            this.decodedText.Name = "decodedText";
+            this.decodedText.Size = new System.Drawing.Size(0, 13);
+            this.decodedText.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(646, 489);
+            this.Controls.Add(this.decodedText);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.tableLayout);
             this.Controls.Add(this.ruleSP);
@@ -147,6 +157,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayout;
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label decodedText;
     }
 }
 

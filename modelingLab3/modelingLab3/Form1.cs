@@ -21,10 +21,6 @@ namespace modelingLab3
         public Form1()
         {
             InitializeComponent();
-
-            for (int i = 0; i < 15; i++)
-                for (int j = 0; j < 14; j++)
-                    colors[i, j] = SystemColors.Control;
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -39,7 +35,7 @@ namespace modelingLab3
             {
                 int len = 8 - rule.Length;
                 for (int i = 0; i < len; i++)
-                    rule = rule.Insert(0, "0");
+                    rule = rule.Insert(0, "0"); // Заполнение нулями слева до полноты.
             }
 
             if (activeFirstTime)
@@ -51,9 +47,9 @@ namespace modelingLab3
                     FirstLine[7] = 1;
                     FirstLine[8] = 1;
                     FirstLine[12] = 1;
-                    colors[7, 0] = Color.Black;
-                    colors[8, 0] = Color.Black;
-                    colors[12, 0] = Color.Black;
+                    colors[7, 0] = Color.Green;
+                    colors[8, 0] = Color.Green;
+                    colors[12, 0] = Color.Green;
 
                 for (int i = 0; i < otherLine.Count; i++)
                     otherLine[i] = 0;
@@ -74,10 +70,11 @@ namespace modelingLab3
                 timer1.Stop();
             }
         }
-        int Count = 1;
+        int generation = 1;
 
         public int check(string help)
         {
+
             switch (help)
             {
                 case "110":
@@ -100,33 +97,30 @@ namespace modelingLab3
                     return rule[0] - 48;
             }
         }
+        bool First = true;
         private void timer1_Tick(object sender, EventArgs e)
         {
-           for (int i = 0; i < otherLine.Count; i++)
-                 line[i] = otherLine[i];
+            if (First == true) // Хак с пропуском первой строки.
+                First = false;
+            else
+                for (int i = 0; i < otherLine.Count; i++)
+                    line[i] = otherLine[i];
 
-            for (int i = 0; i < line.Count; i++)
+            for (int i = 1; i < line.Count - 1; i++)
             {
-                if (i != 0 && i != line.Count - 1)
-                {
-                    string Result = "";
-                    Result = line[i - 1].ToString() + line[i].ToString() + line[i + 1].ToString();
-                    int result = check(Result);
-                    otherLine[i] = result;
-                    
-                    if (otherLine[i] == 0)
-                    {
-                        colors[i, Count] = Color.Green;
-                    }
-                }
+                string Result = line[i - 1].ToString() + line[i].ToString() + line[i + 1].ToString();
+                otherLine[i] = check(Result); //Левая ячейка, центральная и правая.
+                if (otherLine[i] == 1)
+                    colors[i, generation] = Color.Green;
             }
 
             tableLayout.Refresh();
-            Count++;
+            generation++;
 
-            if (Count == 13)
+            if (generation == 13)
             {
                 timer1.Stop();
+                generation = 0;
                 startButton.Enabled = false;
             }
         }
@@ -138,12 +132,21 @@ namespace modelingLab3
 
         private void ruleSP_ValueChanged(object sender, EventArgs e)
         {
-
+            String buffer = Convert.ToString((int)ruleSP.Value, 2);
+            if (buffer.Length != 8)
+            {
+                int len = 8 - buffer.Length;
+                for (int i = 0; i < len; i++)
+                    buffer = buffer.Insert(0, "0");
+            }
+            decodedText.Text = buffer;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            for (int i = 0; i < 15; i++)
+                for (int j = 0; j < 14; j++)
+                    colors[i, j] = SystemColors.Control;
         }
 
         private void tableLayout_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
