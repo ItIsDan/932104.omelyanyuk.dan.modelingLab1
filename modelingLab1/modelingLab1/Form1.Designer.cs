@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.heightSP = new System.Windows.Forms.NumericUpDown();
             this.time = new System.Windows.Forms.Label();
             this.timeSP = new System.Windows.Forms.NumericUpDown();
@@ -103,10 +103,10 @@
             // 
             this.chartLab1.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartLab1.BorderlineWidth = 4;
-            chartArea2.Name = "ChartArea1";
-            this.chartLab1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartLab1.Legends.Add(legend2);
+            chartArea3.Name = "ChartArea1";
+            this.chartLab1.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartLab1.Legends.Add(legend3);
             this.chartLab1.Location = new System.Drawing.Point(12, 205);
             this.chartLab1.Name = "chartLab1";
             this.chartLab1.Size = new System.Drawing.Size(760, 314);

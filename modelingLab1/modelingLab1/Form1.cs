@@ -26,15 +26,13 @@ namespace modelingLab1
         private void Form1_ResizeBegin(object sender, EventArgs e)
         {}
 
-       
-
         private void Form1_Load(object sender, EventArgs e)
         {
             dataGridView1.ColumnHeadersVisible = false;
 
             for (int i = 0; i < 6; i++)
                 dataGridView1.Columns.Add(i.ToString(), i.ToString());
-            for (int i = 0; i < 5; i++) 
+            for (int i = 0; i < 4; i++) 
                 dataGridView1.Rows.Add();
             
             for (int i = 0; i < 6; i++)
@@ -47,7 +45,6 @@ namespace modelingLab1
             dataGridView1.Rows[1].HeaderCell.Value = "Distance";
             dataGridView1.Rows[2].HeaderCell.Value = "Max Height";
             dataGridView1.Rows[3].HeaderCell.Value = "Last Speed";
-            dataGridView1.Rows[4].HeaderCell.Value = "Color";
         }
 
         private void launch_Click_1(object sender, EventArgs e)
@@ -58,10 +55,6 @@ namespace modelingLab1
                     for (int k = 0; k < 6; k++)
                     {
                         chartLab1.Series[k].Points.Clear();
-                        dataGridView1.Rows[j].Cells[k].Value = "";
-                        dataGridView1.Rows[j].Cells[k].Value = "";
-                        dataGridView1.Rows[j].Cells[k].Value = "";
-                        dataGridView1.Rows[j].Cells[k].Value = "";
                         dataGridView1.Rows[j].Cells[k].Value = "";
                     }
                 
@@ -109,7 +102,6 @@ namespace modelingLab1
                 dataGridView1.Rows[1].Cells[i].Value = x.ToString();
                 dataGridView1.Rows[2].Cells[i].Value = maxY.ToString();
                 dataGridView1.Rows[3].Cells[i].Value = v.ToString();
-                dataGridView1.Rows[4].Cells[i].Value = chartLab1.Series[i].BorderColor;
                 i++;
             }
 
