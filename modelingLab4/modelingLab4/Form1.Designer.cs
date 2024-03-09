@@ -33,10 +33,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.activate = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,8 +40,19 @@
             this.clear = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.scaleSP = new System.Windows.Forms.NumericUpDown();
+            this.timerSP = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.NumericUpDown();
+            this.textBox2 = new System.Windows.Forms.NumericUpDown();
+            this.textBox4 = new System.Windows.Forms.NumericUpDown();
+            this.textBox3 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scaleSP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timerSP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -80,39 +87,8 @@
             // 
             // timer1
             // 
+            this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(310, 506);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(48, 20);
-            this.textBox4.TabIndex = 18;
-            this.textBox4.Text = "3";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(310, 476);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(48, 20);
-            this.textBox3.TabIndex = 17;
-            this.textBox3.Text = "3";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(118, 506);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(46, 20);
-            this.textBox2.TabIndex = 16;
-            this.textBox2.Text = "3";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(118, 476);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(46, 20);
-            this.textBox1.TabIndex = 15;
-            this.textBox1.Text = "2";
             // 
             // label4
             // 
@@ -181,7 +157,7 @@
             // 
             this.scaleSP.Location = new System.Drawing.Point(72, 542);
             this.scaleSP.Maximum = new decimal(new int[] {
-            16,
+            12,
             0,
             0,
             0});
@@ -200,17 +176,120 @@
             0});
             this.scaleSP.ValueChanged += new System.EventHandler(this.scaleSP_ValueChanged);
             // 
+            // timerSP
+            // 
+            this.timerSP.Location = new System.Drawing.Point(199, 542);
+            this.timerSP.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.timerSP.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.timerSP.Name = "timerSP";
+            this.timerSP.Size = new System.Drawing.Size(62, 20);
+            this.timerSP.TabIndex = 23;
+            this.timerSP.Value = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            this.timerSP.ValueChanged += new System.EventHandler(this.timerSP_ValueChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(140, 544);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 13);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "Интервал";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(118, 476);
+            this.textBox1.Maximum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(46, 20);
+            this.textBox1.TabIndex = 24;
+            this.textBox1.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(118, 504);
+            this.textBox2.Maximum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(46, 20);
+            this.textBox2.TabIndex = 25;
+            this.textBox2.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(310, 507);
+            this.textBox4.Maximum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(46, 20);
+            this.textBox4.TabIndex = 27;
+            this.textBox4.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(310, 479);
+            this.textBox3.Maximum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(46, 20);
+            this.textBox3.TabIndex = 26;
+            this.textBox3.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(489, 569);
-            this.Controls.Add(this.scaleSP);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.timerSP);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.scaleSP);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -224,6 +303,11 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scaleSP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timerSP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,10 +319,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button activate;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -246,6 +326,12 @@
         private System.Windows.Forms.Button clear;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown scaleSP;
+        private System.Windows.Forms.NumericUpDown timerSP;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.NumericUpDown textBox1;
+        private System.Windows.Forms.NumericUpDown textBox2;
+        private System.Windows.Forms.NumericUpDown textBox4;
+        private System.Windows.Forms.NumericUpDown textBox3;
     }
 }
 
